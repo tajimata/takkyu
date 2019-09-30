@@ -1,0 +1,37 @@
+// /* 幅と高さを設定 */
+// @mixin box($width, $height) {
+//   @if $width {
+//     width: $width;
+//   }
+//   @if $height {
+//     height: $height;
+//   }
+// }
+
+// /* 背景画像 */
+// @mixin bg-image($url) {
+//   background-image: image-url($url);
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// /* 商品出品画面のセレクト欄 */
+// @mixin frame() {
+//   padding: 40px;
+//   border-bottom: 1px solid $light-gray2;
+// }
+
+// /* snsアイコン */
+// @mixin sns-icon() {
+//   text-decoration: none;
+//   &:hover {
+//     opacity: 0.8;
+//   }
+// }
+
+// /* ユーザー登録 入力項目 */
+// @mixin signup-form($width, $height) {
+//   width: $width;
+//   height: $height;
+//   border-radius: 4px;
+// }

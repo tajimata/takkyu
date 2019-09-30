@@ -1,0 +1,26 @@
+@import "reset";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+@import "config/*";
+@import "mixin/*";
+@import "modules/*";
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
+    メイリオ, Meiryo, sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+}
