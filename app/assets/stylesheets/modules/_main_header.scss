@@ -1,0 +1,92 @@
+.header__top {
+  background-color: #dbfbe3;
+  color: #3cb371;
+  height: 90px;
+  width: 100%;
+  display: inline-flex;
+  border-bottom: 1px solid #98d98e ;
+  
+  
+  &__logo {
+    font-size: 36px;
+    padding: 18px 60px 18px 40px;
+
+
+  &__list {
+    display: inline-flex;
+    padding: 33px 10px;
+    height: 100%;
+    width: 500px;
+    p{
+      padding: 33px 10px;
+      
+
+    }
+  }
+  }
+  &__exit {
+    // float: right;
+    font-size: 26px;
+    padding: 25px 40px;
+  }
+}
+.header__bottom {
+  background-color:#98d98e;
+  height: 100px;
+  & %p __left {
+    background-color: #dffff5;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+  }
+  h1 {
+    background-color: #dffff5;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+  }
+}
+
+// .header {
+//   background-color: #0C316A;
+//   color: #fff;
+//   height: 90px;
+//   // width: 100%;
+//   display: inline-flex;
+// }
+
+// .header-logo {
+
+//   font-size: 36px; /*問  文字のサイズ36pxに出来ているか*/
+//   padding: 18px 60px 18px 40px; /*問 paddingを使用出来ているか*/
+// }
+
+// .header-list {
+
+// }
+
+// .header-list li {
+//   float: left;  /*問  float: leftを使用出来ているか*/
+//   padding: 33px 10px;
+// }
+
+// .header-exit {
+//   float: right;  /*問  float: rightを使用出来ているか*/
+//   font-size: 26px;  /*問  文字のサイズ26pxに出来ているか*/
+//   padding: 25px 40px; /*問  paddingを使用出来ているか*/
+// }
+
+// .contents {
+//   background-color: #CD5949;
+//   height: 200px;
+// }
+
+// .contents h1 {
+//   background-color: #CD5949;
+//   height: 200px;
+//   color: #fff;  /*問  文字を白色*/
+//   text-align: center;  /*問  文字を左右中央に*/
+//   line-height: 200px;   /*問  文字を上下中央に*/
+// }
