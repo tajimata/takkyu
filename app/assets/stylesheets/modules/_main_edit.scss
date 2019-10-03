@@ -1,0 +1,42 @@
+.editmain {
+  color: #3cb371;
+  height: calc(100% - 190px);
+  width: 100%;
+  
+  
+  &__flame {
+    margin: 0px auto;
+    height: 100%;
+    width: 1300px;
+
+
+    &__box {
+      margin: 50px auto;
+      // padding-top: 100px; 
+      height: 1000px;
+      width: 1000px;
+      background-color:green;
+      
+      &__image{
+        
+        height: 600px;
+        width: 100%;
+        background-color: gray;
+      }
+      &__detail{
+        height: 200px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px
+
+      }
+      &__comment{
+        height: 200px;
+        width: 100%;
+        background-color: red;
+        padding: 20px
+
+      }
+    }
+  }
+}
