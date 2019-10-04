@@ -2,9 +2,18 @@
   .header__top
     .header__top__logo hoge
     .header__top__list
+    
       -# .header__top__list__1 
       -# .header__list__2
       -# .header__list__3
-    .header__exit edit
+    .header__top__right
+      - if user_signed_in?
+        .header__top__right__in
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %a.post{:href => "/home/new"} 投稿する
+      - else
+        .header__top__right__out
+          = link_to "ログイン", new_user_session_path, class: 'post'
+          = link_to "新規登録", new_user_registration_path, class: 'post'
   .header__bottom
     %p.header__bottom__left 中央

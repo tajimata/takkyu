@@ -2,16 +2,11 @@
 
 .main
   .main__flame
-    .main__flame__box
-      .main__flame__box__image
-      .main__flame__box__detail
-      -# = simple_format(racket.all)
-
-        %p= @racket.find
-    .main__flame__box
-      .main__flame__box__image
-      .main__flame__box__detail
-    .main__flame__box
-      .main__flame__box__image
-      .main__flame__box__detail
-      
+    - @racket.each do |racket|
+      .main__flame__box
+        .main__flame__box__image{:style => "background-image: url(#{racket.image});"}
+        .main__flame__box__detail
+          %span.name= racket.name
+          = simple_format(racket.text)
+    = paginate(@racket)
+        
