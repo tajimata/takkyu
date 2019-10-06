@@ -8,6 +8,9 @@
     .header__top__right
       - if user_signed_in?
         .header__top__right__in
+          = current_user.nickname
+          
+          %a{:href => "/users/#{current_user.id}"} マイページ
           = link_to "ログアウト", destroy_user_session_path, method: :delete
           %a.post{:href => "/home/new"} 投稿する
       - else

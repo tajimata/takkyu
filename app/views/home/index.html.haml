@@ -6,6 +6,20 @@
       .main__flame__box
         .main__flame__box__image{:style => "background-image: url(#{racket.image});"}
         .main__flame__box__detail
-          %span.name= racket.name
+          %a{:href => ""}
+          %span 投稿者
+          = racket.user.nickname
           = simple_format(racket.text)
+          %li
+            = link_to '詳細', "/home/#{racket.id}", method: :get
+          - if user_signed_in? && current_user.id == racket.user_id
+            .more
+              %span
+              %ul.more_list
+                %li
+                  = link_to '編集', "/home/#{racket.id}/edit", method: :get
+                %li
+                  = link_to '削除', "/home/#{racket.id}", method: :delete
     = paginate(@racket)
+
+
