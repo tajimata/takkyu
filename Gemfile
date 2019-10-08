@@ -72,3 +72,5 @@ gem 'sprockets', '3.7.2'
 gem "font-awesome-rails"
 
 gem 'kaminari' 
+
+gem "font-awesome-rails"

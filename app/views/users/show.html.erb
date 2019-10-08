@@ -1,9 +1,0 @@
-<div class="contents row" >
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @racket.each do |racket| %>
-    <div class="content_post" style="background-image: url(<%= racket.image %>);">
-      <%= simple_format(racket.text) %>
-    </div>
-  <% end %>
-  <%= paginate(@racket) %>
-</div>
