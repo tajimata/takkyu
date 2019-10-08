@@ -1,0 +1,14 @@
+.contents.row
+  .content_post{:style => "background-image: url(#{@racket.image});"}
+    - if user_signed_in? && current_user.id == @racket.user_id
+      .more
+        %ul.more_list
+          %li
+            = link_to '編集', "/racket/#{@racket.id}/edit", method: :get
+          %li
+            = link_to '削除', "/racket/#{@racket.id}", method: :delete
+    = simple_format(@racket.text)
+    %span.name
+      %a{:href => "/users/#{@racket.user.id}"}
+        %span 投稿者
+        = @racket.user.nickname

@@ -1,0 +1,7 @@
+.contents.row
+  = form_tag("/home/#{@racket.id}", method: :patch ) do
+    %h3
+      編集する
+    %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
+    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
+    %input{:type => "submit", :value => "SENT"}/

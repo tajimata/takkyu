@@ -1,48 +1,49 @@
 .header__top {
-  background-color: #dbfbe3;
-  color: #3cb371;
+  background-color: black;
+  color: white;
   height: 90px;
   width: 100%;
   display: inline-flex;
-  border-bottom: 1px solid #98d98e ;
+  border-bottom: 1px solid white ;
   
   &__logo {
     font-size: 36px;
     padding: 18px 60px 18px 40px;
-
+  }
 
   &__list {
     display: inline-flex;
     padding: 33px 10px;
     height: 100%;
     width: 500px;
-    p{
+    &__in{
       padding: 33px 10px;
-      
-
+      a.mymage{
+        font-size: 36px;
+        padding: 18px 60px 18px 40px;
+        color: black;
+      }
     }
   }
-  }
-  &__right {
-    // float: right;
-    font-size: 26px;
-    padding: 25px 40px;
-  }
 }
+
+
+
+
 .header__bottom {
-  background-color:#98d98e;
+  background-color:black;
   height: 100px;
   & %p __left {
-    background-color: #dffff5;
+    background-color: black;
     height: 100px;
-    color: #fff;
+    color: white;
     text-align: center;
     line-height: 100px;
   }
   h1 {
-    background-color: #dffff5;
+    background-color: white;
     height: 100px;
-    color: #fff;
+    color: white;
     text-align: center;
     line-height: 100px;
   }

@@ -1,5 +1,6 @@
 .main {
-  color: black;
+  color: white;
+  background-color: black;
   height: calc(100% - 190px);
   width: 100%;
   
@@ -11,12 +12,13 @@
 
 
     &__box {
-      margin: 100px auto 0px;
+      margin: 0px auto 100px;
       // padding-top: 100px; 
       height: 400px;
       width: 1000px;
       display: flex;
       border-radius: 4px;
+      
       &__image{
         
         height: 400px;
@@ -26,8 +28,12 @@
       &__detail{
         height: 400px;
         width: 400px;
-        background-color: #fff;
-        padding: 20px
+        background-color: black;
+        padding: 20px;
+        border: 1px solid white ;
+      }
+      &__aaa{
+        
       }
     }
   }
