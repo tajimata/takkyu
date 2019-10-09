@@ -15,25 +15,47 @@
       margin: 0px auto 100px;
       // padding-top: 100px; 
       height: 400px;
-      width: 1000px;
+      width: 1100px;
       display: flex;
       border-radius: 4px;
       
-      &__image{
-        
-        height: 400px;
-        width: 600px;
-        background-color: gray;
-      }
+      
       &__detail{
         height: 400px;
-        width: 400px;
+        width: 700px;
         background-color: black;
         padding: 20px;
         border: 1px solid white ;
+        &__box{
+          margin-bottom: 15px;
+          padding: 7px;
+          border: 1px solid white ;
+          
+        }
+        &__bottom{
+          height: 70px;
+          width: 640px;
+          background-color: black;
+          margin: 0px auto;
+          // border: 1px solid white ;
+          display: inline-flex;
+          &__btn{
+            width: 700px;
+            margin: 10px;
+            padding: 7px;
+            border: 1px solid white ;
+          }
+  
+        }
+
       }
-      &__aaa{
-        
+      
+
+      &__image{
+        width: 100%;
+        height: auto;
+        background-color: gray;
+        background-size:contain;
       }
     }
   }
