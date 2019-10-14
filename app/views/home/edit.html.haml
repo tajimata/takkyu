@@ -1,7 +1,11 @@
-.contents.row
-  = form_tag("/home/#{@racket.id}", method: :patch ) do
-    %h3
-      編集する
-    %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
-    %input{:type => "submit", :value => "SENT"}/
+= render 'shared/header'
+
+.edit
+  .edit__post
+    .edit__post__box
+      .edit__post__box__title 編集する
+      .edit__post__box__detail
+        = form_tag("/home/#{@racket.id}", method: :patch ) do
+          %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
+          %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
+          %input{:type => "submit", :value => "SENT"}/

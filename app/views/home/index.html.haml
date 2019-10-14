@@ -4,24 +4,35 @@
   .main__flame
     - @racket.each do |racket|
       .main__flame__box
-        .main__flame__box__image{:style => "background-image: url(#{racket.image});"}
         .main__flame__box__detail
-          %a{:href => ""}
-          %span 投稿者：
-          = racket.user.nickname
-          = simple_format(racket.text)
-          %p
-            = link_to '詳細', "/home/#{racket.id}", method: :get
-          - if user_signed_in? && current_user.id == racket.user_id
-            .more
-              %span
-              %ul.more_list
-                %i.fas.fa-cog
-                %li
-                  = link_to '編集', "/home/#{racket.id}/edit", method: :get
-                %i.fa.fa-trash{"aria-hidden" => "true"}
-                %li
-                  = link_to '削除', "/home/#{racket.id}", method: :delete
+          -# %a{:href => ""}
+          %p.main__flame__box__detail__box
+            %span.main__flame__box__detail__box__text 投稿者：
+            = racket.user.nickname 
+          %p.main__flame__box__detail__box
+            %span.main__flame__box__detail__box__text ラケット：
+            = racket.name
+          %p.main__flame__box__detail__box
+            %span.main__flame__box__detail__box__text ラバー（表）：
+            = racket.rubber 
+          %p.main__flame__box__detail__box
+            %span.main__flame__box__detail__box__text ラバー（裏）：
+            = racket.rubber_back 
+          %p.main__flame__box__detail__box
+            %span.main__flame__box__detail__box__text コメント：
+            = racket.text 
+            -# = simple_format(racket.text) 
+          .main__flame__box__detail__bottom
+            %span.main__flame__box__detail__bottom__btn
+              = link_to '詳細', "/home/#{racket.id}", method: :get
+            - if user_signed_in? && current_user.id == racket.user_id
+              %i.fas.fa-cog
+              %span.main__flame__box__detail__bottom__btn
+                = link_to '編集', "/home/#{racket.id}/edit", class: 'single-container-session-sns__facebook'
+              %i.fa.fa-trash{"aria-hidden" => "true"}
+              %span.main__flame__box__detail__bottom__btn
+                = link_to '削除', "/home/#{racket.id}", method: :delete
+        .main__flame__box__image{:style => "background-image: url(#{racket.image});"}
     = paginate(@racket)
 
 

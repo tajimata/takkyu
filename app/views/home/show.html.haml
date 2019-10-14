@@ -1,14 +1,60 @@
-.contents.row
-  .content_post{:style => "background-image: url(#{@racket.image});"}
-    - if user_signed_in? && current_user.id == @racket.user_id
-      .more
-        %ul.more_list
-          %li
-            = link_to '編集', "/racket/#{@racket.id}/edit", method: :get
-          %li
-            = link_to '削除', "/racket/#{@racket.id}", method: :delete
-    = simple_format(@racket.text)
-    %span.name
-      %a{:href => "/users/#{@racket.user.id}"}
-        %span 投稿者
-        = @racket.user.nickname
+= render 'shared/header'
+.main-show
+  .main-show__box
+    .main-show__box__detail 
+      %p.main-show__box__detail__box
+        %span.main-show__box__detail__box__text 投稿者：
+        = @racket.user.nickname 
+      %p.main-show__box__detail__box
+        %span.main-show__box__detail__box__text ラケット：
+        = @racket.name
+      %p.main-show__box__detail__box
+        %span.main-show__box__detail__box__text ラバー（表）：
+        = @racket.rubber 
+      %p.main-show__box__detail__box
+        %span.main-show__box__detail__box__text ラバー（裏）：
+        = @racket.rubber_back 
+      %p.main-show__box__detail__box
+        %span.main-show__box__detail__box__text その他：
+        = @racket.text 
+      %p.main-show__box__detail__comment-box
+        %span.main-show__box__detail__box__text その他：
+        = @racket.text 
+
+    
+    .main-show__box__right
+      .main-show__box__right__image{:style => "background-image: url(#{@racket.image});"}
+      .main-show__box__right__score
+    -# %p.main__flame__box__detail__box
+    -#   %span.main__flame__box__detail__box__text 投稿者：
+    -#   = racket.user.nickname 
+    -# %p.main__flame__box__detail__box
+    -#   %span.main__flame__box__detail__box__text ラケット：
+    -#   = racket.user.nickname
+    -# %p.main__flame__box__detail__box
+    -#   %span.main__flame__box__detail__box__text ラバー（表）：
+    -# %p.main__flame__box__detail__box
+    -#   %span.main__flame__box__detail__box__text ラバー（裏）：
+    -# %p.main__flame__box__detail__box
+    -#   %span.main__flame__box__detail__box__text その他：
+
+      -# %span.name
+      -# %a{:href => "/users/#{@racket.user.id}"}
+      -#   %span 投稿者:
+      -#   = @racket.user.nickname
+
+
+-# .main-show
+-#   .main-show_box{:style => "background-image: url(#{@racket.image});"}
+-#     - if user_signed_in? && current_user.id == @racket.user_id
+-#       .more
+-#         %ul.more_list
+-#           %li
+-#             = link_to '編集', "/racket/#{@racket.id}/edit", method: :get
+-#           %li
+-#             = link_to '削除', "/racket/#{@racket.id}", method: :delete
+-#     = simple_format(@racket.text)
+-#     %span.name
+-#       %a{:href => "/users/#{@racket.user.id}"}
+-#         %span 投稿者
+-#         = @racket.user.nickname

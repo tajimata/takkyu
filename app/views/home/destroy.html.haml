@@ -1,5 +1,9 @@
-.contents.row
-  .success
-    %h3
-      削除が完了しました。
-    %a.btn{:href => "/"} 投稿一覧へ戻る
+= render 'shared/simple-header'
+
+.destroy
+  .destroy__flame
+    .destroy__flame__top 
+      %p.destroy__flame__top__text 削除が完了しました。
+      
+      %a.destroy__flame__top__btn{:href => "/"} 
+        投稿一覧へ戻る

@@ -1,9 +1,18 @@
-.contents.row
-  = form_tag('/home', method: :post) do
-    %h3
-      投稿する
-    %input{:name => "name", :placeholder => "Racket name", :type => "text"}/
-    %input{:name => "image", :placeholder => "Image Url", :type => "text"}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}
-    %input{:type => "submit", :value => "SENT"}
-    -# - binding.pry
+
+= render 'shared/header'
+.new
+  .new__post
+    .new__post__box
+      .new__post__box__title 投稿する
+      .new__post__box__detail
+        = form_tag('/home', method: :post) do
+          %input{:name => "name", :placeholder => "ラケット", :type => "text"}/
+          %input{:name => "rubber", :placeholder => "ラバー（表）", :type => "text"}/
+          %input{:name => "rubber_back", :placeholder => "ラバー（裏）", :type => "text"}/
+          -# = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
+          %input{:name => "image", :placeholder => "Image Url", :type => "text"}/
+          %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}
+          %input{:type => "submit", :value => "SENT"}
+
+        
+

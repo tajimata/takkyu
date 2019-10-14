@@ -1,0 +1,39 @@
+.destroy{
+  height: 1000px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white ;
+  
+  &__flame{
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    padding-top: 50px;
+    &__top{
+      margin: auto;
+      text-align: center;
+      width: 800px;
+      padding-top: 50px;
+      border: 1px solid white ;
+      border-radius: 8px;
+      height: 500px;
+      width: 800px;
+      &__text{
+        width: 800px;
+        height: 300px;
+        font-size: 25px;
+
+      }
+      &__btn{
+        border: 1px solid white ;
+        height: 10px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 30px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
