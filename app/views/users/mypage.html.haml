@@ -1,0 +1,36 @@
+= render 'shared/header'
+.main
+  .main__mypage
+    %p.main__mypage__top
+      = @nickname
+      さんの投稿一覧
+    - @racket.each do |racket|
+      .main__mypage__box
+        .main__mypage__box__detail
+          -# %a{:href => ""}
+          %p.main__mypage__box__detail__box
+            %span.main__mypage__box__detail__box__text 
+            投稿者：
+            = racket.user.nickname 
+          %p.main__mypage__box__detail__box
+            %span.main__mypage__box__detail__box__text ラケット：
+            = racket.user.nickname
+          %p.main__mypage__box__detail__box
+            %span.main__mypage__box__detail__box__text ラバー（表）：
+          %p.main__mypage__box__detail__box
+            %span.main__mypage__box__detail__box__text ラバー（裏）：
+          %p.main__mypage__box__detail__box
+            %span.main__mypage__box__detail__box__text その他：
+            -# = simple_format(racket.text) 
+          .main__mypage__box__detail__bottom
+            %span.main__mypage__box__detail__bottom__btn
+              = link_to '詳細', "/home/#{racket.id}", method: :get
+            - if user_signed_in? && current_user.id == racket.user_id
+              %i.fas.fa-cog
+              %span.main__mypage__box__detail__bottom__btn
+                = link_to '編集', "/home/#{racket.id}/edit", class: 'single-container-session-sns__facebook'
+              %i.fa.fa-trash{"aria-hidden" => "true"}
+              %span.main__mypage__box__detail__bottom__btn
+                = link_to '削除', "/home/#{racket.id}", method: :delete
+        .main__mypage__box__image{:style => "background-image: url(#{racket.image});"}
+    = paginate(@racket)

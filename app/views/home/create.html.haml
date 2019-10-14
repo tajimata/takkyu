@@ -1,5 +1,9 @@
-.contents.row
-  .success
-    %h3
-      投稿が完了しました。
-    %a.btn{:href => "/home"} 投稿一覧へ戻る
+= render 'shared/simple-header'
+
+.success
+  .success__flame
+    .success__flame__top 
+      %p.success__flame__top__text 投稿が完了しました。
+      
+      %a.success__flame__top__btn{:href => "/"} 
+        投稿一覧へ戻る

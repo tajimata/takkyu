@@ -10,7 +10,13 @@ class HomeController < ApplicationController
   end
 
   def create
-    Racket.create(image: racket_params[:image], text: racket_params[:text], user_id: current_user.id)
+    Racket.create(image:       racket_params[:image], 
+                  text:        racket_params[:text], 
+                  user_id:     current_user.id,  
+                  name:        racket_params[:name],
+                  rubber:      racket_params[:rubber],
+                  rubber_back: racket_params[:rubber_back])
+    
   end
 
   def destroy
@@ -35,7 +41,7 @@ class HomeController < ApplicationController
 
   private
   def racket_params
-    params.permit(:name, :image, :text)
+    params.permit(:name, :image, :text , :rubber, :rubber_back)
   end
 
   def move_to_index

@@ -1,0 +1,50 @@
+.simple-header{
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid white ;
+  
+  &__box {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 30px;
+    width: 170px;
+    height: 100px;
+    width: 200px;
+  }
+}
+.login{
+  height: 2000px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white ;
+  
+  &__flame{
+    height: 1000px;
+    width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+    .login__flame__top{
+      margin: auto;
+      font-size: 30px;
+      width: 100px;
+      padding-bottom: 50px
+
+    }
+    &__box{
+      border: 1px solid white ;
+      height: 800px;
+      width: 100%;
+      border-radius: 8px;
+      padding: 50px;
+      .label{
+        height: 100px;
+        width: 100%;
+        font-size: 50px;
+        border-bottom: 1px solid white ;
+      }
+    }
+  }
+}

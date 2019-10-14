@@ -1,41 +1,11 @@
-.contents.row
-  = form_tag("/home/#{@racket.id}", method: :patch ) do
-    %h3
-      編集する
-    %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
-    %input{:type => "submit", :value => "SENT"}/
 = render 'shared/header'
 
-.main
-  .main__flame
-    - @racket.each do |racket|
-      .main__flame__box
-        .main__flame__box__detail
-          %a{:href => ""}
-          %p.main__flame__box__detail__box
-            %span.main__flame__box__detail__box__text 投稿者：
-            = racket.user.nickname 
-          %p.main__flame__box__detail__box
-            %span.main__flame__box__detail__box__text ラケット：
-            = racket.user.nickname
-          %p.main__flame__box__detail__box
-            %span.main__flame__box__detail__box__text ラバー（表）：
-          %p.main__flame__box__detail__box
-            %span.main__flame__box__detail__box__text ラバー（裏）：
-          %p.main__flame__box__detail__box
-            %span.main__flame__box__detail__box__text その他：
-            -# = simple_format(racket.text) 
-          .main__flame__box__detail__bottom
-            %span.main__flame__box__detail__bottom__btn
-              = link_to '詳細', "/home/#{racket.id}", method: :get
-            - if user_signed_in? && current_user.id == racket.user_id
-              %i.fas.fa-cog
-              %span.main__flame__box__detail__bottom__btn
-                = link_to '編集', "/home/#{racket.id}/edit", class: 'single-container-session-sns__facebook'
-              %i.fa.fa-trash{"aria-hidden" => "true"}
-              %span.main__flame__box__detail__bottom__btn
-                = link_to '削除', "/home/#{racket.id}", method: :delete
-        .main__flame__box__image{:style => "background-image: url(#{racket.image});"}
-    = paginate(@racket)
-
+.edit
+  .edit__post
+    .edit__post__box
+      .edit__post__box__title 編集する
+      .edit__post__box__detail
+        = form_tag("/home/#{@racket.id}", method: :patch ) do
+          %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
+          %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
+          %input{:type => "submit", :value => "SENT"}/

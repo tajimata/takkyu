@@ -1,0 +1,16 @@
+.simple-header{
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid white ;
+  
+  &__box {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 30px;
+    width: 170px;
+    height: 100px;
+    width: 200px;
+  }
+}
