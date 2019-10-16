@@ -9,10 +9,11 @@
           %input{:name => "name", :placeholder => "ラケット", :type => "text"}/
           %input{:name => "rubber", :placeholder => "ラバー（表）", :type => "text"}/
           %input{:name => "rubber_back", :placeholder => "ラバー（裏）", :type => "text"}/
-          -# = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
+          %input{:name => "power", :placeholder => "スピード", :type => "integer"}/
+          %input{:name => "spin", :placeholder => "スピン", :type => "integer"}/
+          %input{:name => "control", :placeholder => "コントロール", :type => "integer"}/
+          %input{:name => "weight", :placeholder => "重量", :type => "integer"}/
+          %input{:name => "general", :placeholder => "総合", :type => "integer"}/
           %input{:name => "image", :placeholder => "Image Url", :type => "text"}/
           %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}
           %input{:type => "submit", :value => "SENT"}
-
-        
-

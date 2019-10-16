@@ -5,7 +5,15 @@
     .edit__post__box
       .edit__post__box__title 編集する
       .edit__post__box__detail
-        = form_tag("/home/#{@racket.id}", method: :patch ) do
+        = form_tag('/home', method: :post) do
+          %input{:name => "name", :placeholder => "ラケット", :type => "text", :value => "#{@racket.name}"}/
+          %input{:name => "rubber", :placeholder => "ラバー（表）", :type => "text", :value => "#{@racket.rubber}"}/
+          %input{:name => "rubber_back", :placeholder => "ラバー（裏）", :type => "text", :value => "#{@racket.rubber_back}"}/
+          %input{:name => "power", :placeholder => "スピード", :type => "integer", :value => "#{@racket.power}"}/
+          %input{:name => "spin", :placeholder => "スピン", :type => "integer", :value => "#{@racket.spin}"}/
+          %input{:name => "control", :placeholder => "コントロール", :type => "integer", :value => "#{@racket.control}"}/
+          %input{:name => "weight", :placeholder => "重量", :type => "integer", :value => "#{@racket.weight}"}/
+          %input{:name => "general", :placeholder => "総合", :type => "integer", :value => "#{@racket.general}"}/
           %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@racket.image}"}/
           %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @racket.text
           %input{:type => "submit", :value => "SENT"}/
