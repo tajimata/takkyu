@@ -28,7 +28,7 @@
             - if user_signed_in? && current_user.id == racket.user_id
               %i.fas.fa-cog
               %span.main__mypage__box__detail__bottom__btn
-                = link_to '編集', "/home/#{racket.id}/edit", class: 'single-container-session-sns__facebook'
+                = link_to '編集', "/home/#{racket.id}/edit", class: ''
               %i.fa.fa-trash{"aria-hidden" => "true"}
               %span.main__mypage__box__detail__bottom__btn
                 = link_to '削除', "/home/#{racket.id}", method: :delete

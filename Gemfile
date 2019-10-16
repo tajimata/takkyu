@@ -74,3 +74,5 @@ gem "font-awesome-rails"
 gem 'kaminari' 
 
 gem "font-awesome-rails"
+
+gem 'lazy_high_charts'
