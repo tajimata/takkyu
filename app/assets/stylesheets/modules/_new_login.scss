@@ -26,11 +26,12 @@
     width: 1000px;
     margin: auto;
     padding-top: 50px;
-    .login__flame__top{
+    &__top{
       margin: auto;
       font-size: 30px;
-      width: 100px;
-      padding-bottom: 50px
+      width: 200px;
+      padding-bottom: 50px;
+      height: 100px;
 
     }
     &__box{

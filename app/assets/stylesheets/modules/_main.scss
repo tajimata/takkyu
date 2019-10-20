@@ -32,6 +32,10 @@
           padding: 7px;
           border: 1px solid white ;
           border-radius: 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
         }
         &__bottom{
           height: 70px;
@@ -40,13 +44,26 @@
           margin: 0px auto;
           // border: 1px solid white ;
           display: inline-flex;
+          transition    : .3s;
           &__btn{
             width: 700px;
             margin: 10px;
             padding: 7px;
             border: 1px solid white ;
             border-radius: 8px;
+            &__text{
+              text-align: center;
+            }
           }
+
+          // }
+          // &__btn:hover{
+          // box-shadow    : none;        /* カーソル時の影消去 */
+          // color         : #000000;     /* 背景色     */
+          // background    : #ffffff;     /* 文字色     */
+          // border: 1px solid black ;
+          // margin: 1px;
+          // }
   
         }
 
@@ -58,6 +75,7 @@
         height: auto;
         background-color: gray;
         background-size: contain;
+        max-width: 100%;
       }
     }
   }
