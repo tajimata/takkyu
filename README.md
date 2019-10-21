@@ -1,5 +1,7 @@
 # README
 
+現在未だデプロイできていない為、GIF画像になります。
+
 [![Image from Gyazo](https://i.gyazo.com/9b74afea35a88e462795401eeccd1447.gif)](https://gyazo.com/9b74afea35a88e462795401eeccd1447)
 
 [![Image from Gyazo](https://i.gyazo.com/08506e830d17c47b339884f353a06f59.gif)](https://gyazo.com/08506e830d17c47b339884f353a06f59)
@@ -48,7 +50,8 @@ TableTennis
 プロ選手の用具集<br>
 検索機能<br>
 メーカーのサイトへのリンク集<br>
-画像を複数枚投稿できるようにする
+画像を複数枚投稿できるようにする<br>
+画像投稿時のトリミング機能<br>
 
 
 ## 使用技術
