@@ -82,7 +82,7 @@ MySQL2<br>
 
 ## racket table
 
-### プロフィール
+### ラケット
 
 |    Column    |    Type    |     Options      |
 |   :-----:    | :--------: | :--------------: |
