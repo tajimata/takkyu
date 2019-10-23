@@ -5,7 +5,7 @@
     .edit__post__box
       .edit__post__box__title 編集する
       .edit__post__box__detail
-        = form_tag('/home', method: :post) do
+        = form_tag("/home/#{@racket.id}", method: :patch ) do
           %input{:name => "name", :placeholder => "ラケット", :type => "text", :value => "#{@racket.name}"}/
           %input{:name => "rubber", :placeholder => "ラバー（表）", :type => "text", :value => "#{@racket.rubber}"}/
           %input{:name => "rubber_back", :placeholder => "ラバー（裏）", :type => "text", :value => "#{@racket.rubber_back}"}/
